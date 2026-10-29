@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jusco United – Beverage Distributor</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10284B;--blue:#1F5FBF;--red:#D7263D;--bg:#F4F7FB;--ink:#14202E;--mute:#52606F;--line:#DCE4EE}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',Arial,sans-serif;padding-bottom:84px}
+a{color:var(--blue)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.top{background:var(--navy);color:#fff;font-size:13px;text-align:center;padding:10px 16px}
+header{background:#fff;box-shadow:0 1px 4px rgba(16,40,75,.15);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.logo b{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo span{font-size:19px;font-weight:700;line-height:1.1}.logo small{display:block;font-size:11px;font-weight:500;color:var(--mute)}
+nav{display:flex;gap:16px}nav a{min-height:44px;display:flex;align-items:center;color:var(--navy);text-decoration:none;font-weight:500;font-size:14px;white-space:nowrap}
+.hero{margin-top:20px;background:var(--navy);color:#fff;border-radius:20px;padding:36px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.hero>div{flex:1;min-width:260px}
+.kick{font-size:12px;font-weight:600;letter-spacing:1px;color:#9CC2FF}
+h1{margin:10px 0;font-size:40px;line-height:1.15}
+.hero p{margin:0 0 20px;color:#DCE8FA;line-height:1.6}
+.btn{min-height:48px;padding:0 26px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;border:0;font-family:inherit;cursor:pointer}
+.btn.p{background:#fff;color:var(--navy)}.btn.o{border:2px solid #fff;color:#fff}
+.ph{background:linear-gradient(135deg,#DCE9FB,#B9D2F5);display:flex;align-items:center;justify-content:center;border-radius:14px;position:relative;overflow:hidden}
+.ph span{line-height:1}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:20px}
+.strip div{background:#fff;border-radius:14px;padding:14px 16px;font-size:13px;color:var(--mute);box-shadow:0 1px 4px rgba(16,40,75,.12)}
+.strip b{display:block;color:var(--navy);font-size:14px;margin-bottom:2px}
+h2{font-size:28px;margin:36px 0 12px;color:var(--navy)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;flex:1 1 100%}
+.chip{min-height:44px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--navy);font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+input[type=search]{min-height:44px;width:100%;max-width:360px;border:1px solid var(--line);border-radius:99px;padding:0 18px;font-family:inherit;font-size:15px}
+.count{font-size:13px;color:var(--mute);margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:#fff;border-radius:16px;padding:12px;box-shadow:0 1px 4px rgba(16,40,75,.15);display:flex;flex-direction:column;gap:6px}
+.card h3{margin:6px 0 0;font-size:16px;color:var(--navy)}
+.meta,.sub{margin:0;font-size:12.5px;color:var(--mute);line-height:1.5}
+.price{display:flex;align-items:baseline;gap:6px;margin-top:4px}.price b{font-size:24px;color:var(--navy)}.price span{font-size:13px;color:var(--mute)}
+.profit{margin:2px 0 6px;font-size:13px;font-weight:600;color:#0B6B3A;background:#E3F5EA;border-radius:99px;padding:5px 12px;align-self:flex-start}
+.add{margin-top:auto;min-height:44px;border:0;border-radius:99px;background:var(--red);color:#fff;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.step{background:#fff;border-radius:16px;padding:18px;box-shadow:0 1px 4px rgba(16,40,75,.12)}
+.step i{font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+.step b{display:block;color:var(--navy)}.step p{margin:4px 0 0;font-size:13.5px;color:var(--mute);line-height:1.5}
+footer{background:var(--navy);color:#fff;margin-top:44px;padding:32px 0;font-size:14px;line-height:1.8}
+footer .wrap{display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between}
+footer small{display:block;color:#B9C8DE;font-size:12px;margin-top:10px;flex:1 1 100%}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -2px 10px rgba(16,40,75,.2);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:8}
+.bar[hidden],.drawer[hidden]{display:none}
+.bar span{font-weight:600;color:var(--navy);font-size:15px}
+.drawer{position:fixed;inset:0;background:rgba(16,40,75,.55);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.panel{background:#fff;width:100%;max-width:560px;max-height:85vh;overflow:auto;border-radius:20px 20px 0 0;padding:18px}
+.panel h2{margin:0 0 10px;font-size:22px}
+.line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.line small{display:block;color:var(--mute)}
+.q{display:flex;align-items:center;gap:8px}.q button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;cursor:pointer}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin:14px 0;color:var(--navy)}
+.float{position:fixed;right:12px;bottom:92px;display:flex;flex-direction:column;gap:10px;z-index:7}
+.float a{width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.25);font-size:20px;text-decoration:none}
+@media(max-width:640px){h1{font-size:30px}.hero{padding:22px}nav{overflow-x:auto;width:100%}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.card{padding:8px}.card h3{font-size:14px}.price b{font-size:20px}h2{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="top">Design preview only. Ordering is not live yet.</div>
+<header><div class="wrap">
+<a class="logo" href="#"><b>J</b><span>Jusco United<small>Consumer Goods Trading</small></span></a>
+<nav><a href="#products">Products</a><a href="#how">How to order</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero"><div>
+<div class="kick">BEVERAGE DISTRIBUTOR · NORTH LUZON</div>
+<h1>Cold drinks for your store, delivered by the case.</h1>
+<p>Pepsi, Mirinda, Seven-Up, Mt. Dew, Gatorade, Premier Water and more. See the case price, your profit, and build your order in minutes.</p>
+<a class="btn p" href="#products">Browse products</a> <a class="btn o" href="#how">How to order</a>
+</div><div><div class="ph" id="heroPh" style="height:260px"></div></div></section>
+<section class="strip">
+<div><b>Sold by the case</b>Clear case and per-bottle prices</div>
+<div><b>Know your profit</b>Retail price and profit per case shown</div>
+<div><b>Delivery</b>[CONFIRM DELIVERY AREAS]</div>
+<div><b>Order easily</b>Order list sent via [VIBER / MESSENGER / CALL]</div>
+</section>
+<section id="products">
+<h2>Products</h2>
+<div class="tools"><input id="q" type="search" placeholder="Search products" aria-label="Search products"><div class="chips" id="chips"></div></div>
+<div class="count" id="count"></div>
+<div class="grid" id="grid"></div>
+</section>
+<section id="how"><h2>How to order</h2>
+<div class="steps">
+<div class="step"><i>1</i><b>Pick your products</b><p>Tap "Add 1 case" on the drinks your store needs.</p></div>
+<div class="step"><i>2</i><b>Check your order list</b><p>Change the number of cases and see the total.</p></div>
+<div class="step"><i>3</i><b>Send and receive</b><p>Send the list to our sales office. We confirm and deliver on [DELIVERY DAYS].</p></div>
+</div></section>
+</main>
+<footer id="contact"><div class="wrap">
+<div><b style="font-size:20px">Jusco United Consumer Goods Trading</b><br>Beverage distributor, North Luzon</div>
+<div><b>Visit us</b><br>[ADDRESS]<br>Open [DAYS / HOURS]</div>
+<div><b>Contact</b><br>[PHONE]<br>[VIBER / MESSENGER]</div>
+<small>Prices per case unless stated, as of [DATE], and may change without notice. Brand names belong to their owners.</small>
+</div></footer>
+<div class="float"><a href="#contact" aria-label="Contact us">☎</a></div>
+<div class="bar" id="bar" hidden><span id="barText"></span><button class="btn" style="background:var(--red);color:#fff" id="viewBtn">View order list</button></div>
+<div class="drawer" id="drawer" hidden><div class="panel" role="dialog" aria-modal="true" aria-label="Order list">
+<h2>Your order list</h2><div id="lines"></div>
+<div class="total"><span>Total</span><span id="tot"></span></div>
+<button class="btn" style="background:var(--red);color:#fff;width:100%;justify-content:center" id="send">Send order</button>
+<button class="btn" style="background:#fff;color:var(--navy);border:1px solid var(--line);width:100%;justify-content:center;margin-top:8px" id="close">Keep shopping</button>
+</div></div>
+<script>
+var DATA=[{"b": "Pepsi", "n": "Pepsi 8 oz", "t": "Bottle", "c": "P8", "case": 196, "bt": 8.17, "srp": 10, "pack": 24, "profit": 44, "s": "pepsi-8-oz"}, {"b": "Pepsi", "n": "Pepsi 290 ml", "t": "Bottle", "c": "PR290", "case": 196, "bt": 16.33, "srp": 20, "pack": 12, "profit": 44, "s": "pepsi-290-ml"}, {"b": "Pepsi", "n": "Pepsi 750 ml", "t": "Bottle", "c": "P750", "case": 280, "bt": 23.33, "srp": 28, "pack": 12, "profit": 56, "s": "pepsi-750-ml"}, {"b": "Pepsi", "n": "Pepsi 1 L", "t": "Bottle", "c": "P1", "case": 398, "bt": 33.17, "srp": 40, "pack": 12, "profit": 82, "s": "pepsi-1-l"}, {"b": "Pepsi", "n": "Pepsi 1.25 L", "t": "Bottle", "c": "PR1.25x6", "case": 256, "bt": 42.67, "srp": 50, "pack": 6, "profit": 44, "s": "pepsi-1-25-l"}, {"b": "Pepsi", "n": "Pepsi 1.5 L", "t": "Bottle", "c": "PR1.5x12", "case": 732, "bt": 61, "srp": 65, "pack": 12, "profit": 48, "s": "pepsi-1-5-l"}, {"b": "Pepsi", "n": "Pepsi 2 L (Regular, Light)", "t": "Bottle", "c": "PR2L / PD2L", "case": 717, "bt": 79.67, "srp": 85, "pack": 9, "profit": 48, "s": "pepsi-2-l-regular-light"}, {"b": "Pepsi", "n": "Pepsi Can (Regular, Light, Max)", "t": "Can", "c": "PRC / PDC / PMC", "case": 742, "bt": 30.92, "srp": 32, "pack": 24, "profit": 26, "s": "pepsi-can-regular-light-max"}, {"b": "Mirinda", "n": "Mirinda 8 oz", "t": "Bottle", "c": "MO8", "case": 205, "bt": 8.54, "srp": 11, "pack": 24, "profit": 59, "s": "mirinda-8-oz"}, {"b": "Mirinda", "n": "Mirinda 295 ml", "t": "Bottle", "c": "MO295", "case": 196, "bt": 16.33, "srp": 20, "pack": 12, "profit": 44, "s": "mirinda-295-ml"}, {"b": "Mirinda", "n": "Mirinda 1.25 L", "t": "Bottle", "c": "MO1.25x6", "case": 256, "bt": 42.67, "srp": 50, "pack": 6, "profit": 44, "s": "mirinda-1-25-l"}, {"b": "Mirinda", "n": "Mirinda 1.5 L", "t": "Bottle", "c": "MO1.5", "case": 732, "bt": 61, "srp": 65, "pack": 12, "profit": 48, "s": "mirinda-1-5-l"}, {"b": "Mirinda", "n": "Mirinda 2 L", "t": "Bottle", "c": "MO2L", "case": 717, "bt": 79.67, "srp": 85, "pack": 9, "profit": 48, "s": "mirinda-2-l"}, {"b": "Mirinda", "n": "Mirinda Can", "t": "Can", "c": "MOC", "case": 742, "bt": 30.92, "srp": 32, "pack": 24, "profit": 26, "s": "mirinda-can"}, {"b": "Seven-Up", "n": "Seven-Up 7 oz", "t": "Bottle", "c": "S7", "case": 196, "bt": 8.17, "srp": 10, "pack": 24, "profit": 44, "s": "seven-up-7-oz"}, {"b": "Seven-Up", "n": "Seven-Up 295 ml", "t": "Bottle", "c": "SR295", "case": 196, "bt": 16.33, "srp": 20, "pack": 12, "profit": 44, "s": "seven-up-295-ml"}, {"b": "Seven-Up", "n": "Seven-Up 1.25 L", "t": "Bottle", "c": "SR1.25x6", "case": 256, "bt": 42.67, "srp": 50, "pack": 6, "profit": 44, "s": "seven-up-1-25-l"}, {"b": "Seven-Up", "n": "Seven-Up 1.5 L", "t": "Bottle", "c": "SR1.5", "case": 732, "bt": 61, "srp": 65, "pack": 12, "profit": 48, "s": "seven-up-1-5-l"}, {"b": "Seven-Up", "n": "Seven-Up Can", "t": "Can", "c": "SRC / SDC", "case": 742, "bt": 30.92, "srp": 32, "pack": 24, "profit": 26, "s": "seven-up-can"}, {"b": "Mt. Dew", "n": "Mt. Dew 8 oz", "t": "Bottle", "c": "MD8", "case": 205, "bt": 8.54, "srp": 11, "pack": 24, "profit": 59, "s": "mt-dew-8-oz"}, {"b": "Mt. Dew", "n": "Mt. Dew 12 oz", "t": "Bottle", "c": "MD12", "case": 295, "bt": 12.29, "srp": 15, "pack": 24, "profit": 65, "s": "mt-dew-12-oz"}, {"b": "Mt. Dew", "n": "Mt. Dew 750 ml", "t": "Bottle", "c": "MD750", "case": 280, "bt": 23.33, "srp": 28, "pack": 12, "profit": 56, "s": "mt-dew-750-ml"}, {"b": "Mt. Dew", "n": "Mt. Dew Neon 295 ml", "t": "Bottle", "c": "MD295", "case": 196, "bt": 16.33, "srp": 20, "pack": 12, "profit": 44, "s": "mt-dew-neon-295-ml"}, {"b": "Mt. Dew", "n": "Mt. Dew 1.25 L", "t": "Bottle", "c": "MD1.25x6", "case": 256, "bt": 42.67, "srp": 50, "pack": 6, "profit": 44, "s": "mt-dew-1-25-l"}, {"b": "Mt. Dew", "n": "Mt. Dew 1.5 L", "t": "Bottle", "c": "MD1.5", "case": 732, "bt": 61, "srp": 65, "pack": 12, "profit": 48, "s": "mt-dew-1-5-l"}, {"b": "Mt. Dew", "n": "Mt. Dew Can", "t": "Can", "c": "MDC", "case": 742, "bt": 30.92, "srp": 32, "pack": 24, "profit": 26, "s": "mt-dew-can"}, {"b": "Sting", "n": "Sting Strawberry 8 oz", "t": "Bottle", "c": "SS8 / SG8 / SPL8", "case": 300, "bt": 12.5, "srp": 15, "pack": 24, "profit": 60, "s": "sting-strawberry-8-oz"}, {"b": "Sting", "n": "Sting Strawberry 300 ml (A)", "t": "Bottle", "c": "SS330", "case": 444, "bt": 18.5, "srp": 20, "pack": 24, "profit": 36, "s": "sting-strawberry-300-ml-a"}, {"b": "Sting", "n": "Sting Strawberry 300 ml (B)", "t": "Bottle", "c": "SS300", "case": 199, "bt": 16.58, "srp": 20, "pack": 12, "profit": 41, "s": "sting-strawberry-300-ml-b"}, {"b": "Tropicana", "n": "Tropicana Orange 8 oz", "t": "Bottle", "c": "TTO8 / TTOJP8", "case": 300, "bt": 12.5, "srp": 15, "pack": 24, "profit": 60, "s": "tropicana-orange-8-oz"}, {"b": "Tropicana", "n": "Tropicana Orange 355 ml", "t": "Bottle", "c": "TTO355", "case": 609, "bt": 25.38, "srp": 28, "pack": 24, "profit": 63, "s": "tropicana-orange-355-ml"}, {"b": "Tropicana", "n": "Tropicana Orange 1 L", "t": "Bottle", "c": "TTO1L", "case": 646, "bt": 53.83, "srp": 55, "pack": 12, "profit": 14, "s": "tropicana-orange-1-l"}, {"b": "Lipton", "n": "Lipton Soda 290 ml", "t": "Bottle", "c": "Lip Sod L 290ml", "case": 220, "bt": 18.33, "srp": 23, "pack": 12, "profit": 56, "s": "lipton-soda-290-ml"}, {"b": "Lipton", "n": "Lipton 450 ml (Lemon / Red)", "t": "Bottle", "c": "Lemon450 / Red450", "case": 500, "bt": 20.83, "srp": 25, "pack": 24, "profit": 100, "s": "lipton-450-ml-lemon-red"}, {"b": "Gatorade", "n": "Gatorade Blue Bolt 8 oz", "t": "Bottle", "c": "G8G / GTF8", "case": 300, "bt": 12.5, "srp": 15, "pack": 24, "profit": 60, "s": "gatorade-blue-bolt-8-oz"}, {"b": "Gatorade", "n": "Gatorade 237 ml (6 flavors)", "t": "Bottle", "c": "G237bb", "case": 224, "bt": 18.67, "srp": 23, "pack": 12, "profit": 52, "s": "gatorade-237-ml-6-flavors"}, {"b": "Gatorade", "n": "Gatorade 350 ml (6 flavors)", "t": "Bottle", "c": "G350", "case": 739, "bt": 30.79, "srp": 33, "pack": 24, "profit": 53, "s": "gatorade-350-ml-6-flavors"}, {"b": "Gatorade", "n": "Gatorade 500 ml (6 flavors)", "t": "Bottle", "c": "G5", "case": 1010, "bt": 42.08, "srp": 45, "pack": 24, "profit": 70, "s": "gatorade-500-ml-6-flavors"}, {"b": "Gatorade", "n": "Gatorade 900 ml (6 flavors)", "t": "Bottle", "c": "G900", "case": 780, "bt": 65, "srp": 70, "pack": 12, "profit": 60, "s": "gatorade-900-ml-6-flavors"}, {"b": "Gatorade", "n": "Gatorade 1.5 L (4 flavors)", "t": "Bottle", "c": "G1.5", "case": 1309, "bt": 109.08, "srp": 112, "pack": 12, "profit": 35, "s": "gatorade-1-5-l-4-flavors"}, {"b": "Premier Water", "n": "Premier Water 350 ml", "t": "Bottle", "c": "PW350", "case": 187, "bt": 7.79, "srp": 10, "pack": 24, "profit": 53, "s": "premier-water-350-ml"}, {"b": "Premier Water", "n": "Premier Water 500 ml", "t": "Bottle", "c": "PW500", "case": 205, "bt": 8.54, "srp": 15, "pack": 24, "profit": 155, "s": "premier-water-500-ml"}, {"b": "Premier Water", "n": "Premier Water 1 L", "t": "Bottle", "c": "PW1L", "case": 191, "bt": 15.92, "srp": 20, "pack": 12, "profit": 49, "s": "premier-water-1-l"}, {"b": "Milkis", "n": "Milkis 300 ml", "t": "Bottle", "c": "MIL300", "case": 112, "bt": 18.67, "srp": 20, "pack": 6, "profit": 8, "s": "milkis-300-ml"}];
+var EM={"Pepsi":"🥤","Mirinda":"🍊","Seven-Up":"🥤","Mt. Dew":"🥤","Sting":"🍓","Tropicana":"🧃","Lipton":"🍋","Gatorade":"🥤","Premier Water":"💧","Milkis":"🥛"};
+var cart={},brand="All",term="";
+function money(n){return "₱"+n.toLocaleString("en-PH",{maximumFractionDigits:0})}
+function money2(n){return "₱"+n.toFixed(2)}
+function ph(s,e,h,fs){return '<div class="ph" style="'+(h?'height:'+h+'px':'aspect-ratio:1/1')+'"><span style="font-size:'+fs+'px" aria-hidden="true">'+e+'</span><img src="images/'+s+'.jpg" alt="" loading="lazy" onerror="this.remove()"></div>'}
+document.getElementById("heroPh").innerHTML='<span style="font-size:80px" aria-hidden="true">🚚🥤</span><img src="images/hero.jpg" alt="" onerror="this.remove()">';
+var brands=["All"];DATA.forEach(function(d){if(brands.indexOf(d.b)<0)brands.push(d.b)});
+var chips=document.getElementById("chips");
+brands.forEach(function(b){var x=document.createElement("button");x.className="chip"+(b==="All"?" on":"");x.textContent=b;x.onclick=function(){brand=b;[].forEach.call(chips.children,function(c){c.className="chip"+(c===x?" on":"")});draw()};chips.appendChild(x)});
+document.getElementById("q").oninput=function(e){term=e.target.value.toLowerCase();draw()};
+function draw(){var g=document.getElementById("grid"),h="",n=0;
+DATA.forEach(function(d,i){if(brand!=="All"&&d.b!==brand)return;if(term&&d.n.toLowerCase().indexOf(term)<0&&d.b.toLowerCase().indexOf(term)<0)return;n++;var u=d.t.toLowerCase();
+h+='<article class="card">'+ph(d.s,EM[d.b]||"🥤",0,56)+'<h3>'+d.n+'</h3><p class="meta">'+d.t+' · '+d.pack+' per case · Code '+d.c+'</p><div class="price"><b>'+money(d.case)+'</b><span>per case</span></div><p class="sub">'+money2(d.bt)+' per '+u+' · Retail '+money(d.srp)+'</p><p class="profit">Your profit '+money(d.profit)+' per case</p><button class="add" data-i="'+i+'" aria-label="Add 1 case of '+d.n+'">Add 1 case</button></article>'});
+g.innerHTML=h||'<p>No products found.</p>';document.getElementById("count").textContent="Showing "+n+" product"+(n===1?"":"s")}
+document.getElementById("grid").onclick=function(e){var b=e.target.closest(".add");if(!b)return;var i=b.getAttribute("data-i");cart[i]=(cart[i]||0)+1;sync()};
+function sync(){var c=0,t=0;Object.keys(cart).forEach(function(i){c+=cart[i];t+=cart[i]*DATA[i].case});var bar=document.getElementById("bar");bar.hidden=c===0;document.getElementById("barText").textContent=c+" case"+(c===1?"":"s")+" · "+money(t);return[c,t]}
+function lines(){var l=document.getElementById("lines"),h="",t=0,k=Object.keys(cart);k.forEach(function(i){var d=DATA[i],q=cart[i];t+=q*d.case;h+='<div class="line"><div>'+d.n+'<small>'+money(d.case)+' per case</small></div><div class="q"><button data-i="'+i+'" data-d="-1" aria-label="Less">−</button><b>'+q+'</b><button data-i="'+i+'" data-d="1" aria-label="More">+</button></div></div>'});l.innerHTML=h||'<p>Your list is empty.</p>';document.getElementById("tot").textContent=money(t)}
+document.getElementById("viewBtn").onclick=function(){lines();document.getElementById("drawer").hidden=false};
+document.getElementById("close").onclick=function(){document.getElementById("drawer").hidden=true};
+document.getElementById("lines").onclick=function(e){var b=e.target.closest("button");if(!b)return;var i=b.getAttribute("data-i");cart[i]+=parseInt(b.getAttribute("data-d"),10);if(cart[i]<=0)delete cart[i];lines();sync();if(!Object.keys(cart).length)document.getElementById("drawer").hidden=true};
+document.getElementById("send").onclick=function(){alert("This is a design preview. On the real site, this sends your order list to the sales office.")};
+draw();
+</script>
+</body>
+</html>
